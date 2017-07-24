@@ -25,7 +25,8 @@
   "license": "ISC",
   "files": [
     "dist/*",
-    "src/*"
+    "src/*",
+    "tsconfig.json"
   ],
   "bugs": {
     "url": "https://github.com/jvanharn/ng-select/issues"
