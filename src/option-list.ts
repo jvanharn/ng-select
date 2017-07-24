@@ -1,6 +1,6 @@
-import {Option} from './option';
-import {IOption} from './option.interface';
-import {Diacritics} from './diacritics';
+import { Option } from './option';
+import { IOption } from './option.interface';
+import { Diacritics } from './diacritics';
 
 export class OptionList {
 

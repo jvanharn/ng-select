@@ -1,4 +1,4 @@
-import {IOption} from './option.interface';
+import { IOption } from './option.interface';
 
 export class Option {
 
@@ -9,7 +9,7 @@ export class Option {
     selected: boolean;
     shown: boolean;
 
-    constructor(option: IOption) {
+    public constructor(option: IOption) {
         this.wrappedOption = option;
 
         this.disabled = false;
@@ -18,11 +18,11 @@ export class Option {
         this.shown = true;
     }
 
-    get value(): string {
+    public get value(): string {
         return this.wrappedOption.value;
     }
 
-    get label(): string {
+    public get label(): string {
         return this.wrappedOption.label;
     }
 }

@@ -1,9 +1,9 @@
 {
   "name": "ng-select",
-  "version": "1.0.0-beta.6",
+  "version": "1.1.0",
   "description": "Select component for angular.",
   "main": "index.js",
-  "repository": "git@github.com:basvandenberg/ng-select.git",
+  "repository": "git@github.com:jvanharn/ng-select.git",
   "keywords": [
     "angular",
     "select",
@@ -11,36 +11,42 @@
     "selectize",
     "chosen"
   ],
-  "author": "Bastiaan van den Berg <b.a.vandenberg@gmail.com>",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc && node-sass -r -o dist src",
+    "postbuild": "cpx 'src/**/*.{html,scss}' dist"
+  },
+  "authors": [
+    "Bastiaan van den Berg <b.a.vandenberg@gmail.com>",
+    "J. van Harn"
+  ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/basvandenberg/ng-select/issues"
+    "url": "https://github.com/jvanharn/ng-select/issues"
   },
-  "homepage": "https://basvandenberg.github.io/ng-select",
-  "dependencies": {},
+  "homepage": "https://github.com/jvanharn/ng-select",
+  "dependencies": {
+    "tslib": "^1.7.1"
+  },
   "devDependencies": {
-    "@angular/animations": "^4.2.5",
-    "@angular/common": "^4.2.5",
-    "@angular/compiler": "^4.2.5",
-    "@angular/compiler-cli": "^4.2.5",
-    "@angular/core": "^4.2.5",
-    "@angular/forms": "^4.2.5",
-    "@angular/platform-browser": "^4.2.5",
-    "@angular/platform-browser-dynamic": "^4.2.5",
-    "@angular/platform-server": "^4.2.5",
-    "@types/jasmine": "^2.5.53",
-    "@types/node": "^8.0.7",
-    "core-js": "^2.4.1",
-    "del": "^3.0.0",
-    "fs": "^0.0.1-security",
-    "gulp": "^3.9.1",
-    "gulp-jasmine": "^2.4.2",
-    "gulp-sass": "^3.0.0",
-    "gulp-tslint": "^8.1.1",
-    "reflect-metadata": "^0.1.9",
+    "@angular/animations": "^4.3.1",
+    "@angular/common": "^4.3.1",
+    "@angular/compiler": "^4.3.1",
+    "@angular/compiler-cli": "^4.3.1",
+    "@angular/core": "^4.3.1",
+    "@angular/forms": "^4.3.1",
+    "@angular/platform-browser": "^4.3.1",
+    "@angular/platform-browser-dynamic": "^4.3.1",
+    "@angular/platform-server": "^4.3.1",
+    "@types/node": "^6.0.0",
+    "cpx": "^1.5.0",
+    "es6-shim": "^0.35.3",
+    "node-sass": "^4.5.3",
+    "reflect-metadata": "^0.1.10",
+    "rimraf": "^2.6.1",
     "rxjs": "^5.0.2",
     "tslint": "^5.4.3",
-    "typescript": "~2.2.0",
+    "typescript": "~2.3.0",
     "zone.js": "^0.8.12"
   }
 }

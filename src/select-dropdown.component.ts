@@ -1,18 +1,14 @@
-import {AfterViewInit, Component, EventEmitter, Input, OnChanges, OnInit, Output, ViewChild, TemplateRef, ViewEncapsulation} from '@angular/core';
-import {STYLE} from './select-dropdown.component.css';
-import {TEMPLATE} from './select-dropdown.component.html';
-import {Option} from './option';
-import {OptionList} from './option-list';
+import { AfterViewInit, Component, EventEmitter, Input, OnChanges, OnInit, Output, ViewChild, TemplateRef, ViewEncapsulation } from '@angular/core';
+import { Option } from './option';
+import { OptionList } from './option-list';
 
 @Component({
     selector: 'select-dropdown',
-    template: TEMPLATE,
-    styles: [STYLE],
+    templateUrl: 'select-dropdown.component.html',
+    styleUrls: ['select-dropdown.component.css'],
     encapsulation: ViewEncapsulation.None
 })
-
-export class SelectDropdownComponent
-        implements AfterViewInit, OnChanges, OnInit {
+export class SelectDropdownComponent implements AfterViewInit, OnChanges, OnInit {
 
     @Input() filterEnabled: boolean;
     @Input() highlightColor: string;
@@ -86,7 +82,7 @@ export class SelectDropdownComponent
         this.optionList.highlightOption(option);
     }
 
-    onOptionClick(option: Option) {
+    public onOptionClick(option: Option) {
         this.optionClicked.emit(option);
     }
 
@@ -99,7 +95,7 @@ export class SelectDropdownComponent
 
     /** View. **/
 
-    getOptionStyle(option: Option): any {
+    public getOptionStyle(option: Option): any {
         if (option.highlighted) {
             let style: any = {};
 
@@ -116,8 +112,7 @@ export class SelectDropdownComponent
         }
     }
 
-    moveHighlightedIntoView() {
-
+    public moveHighlightedIntoView() {
         let list = this.optionsList.nativeElement;
         let listHeight = list.offsetHeight;
 

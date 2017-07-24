@@ -1,0 +1,21 @@
+{
+    "version": "2.3",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "lib": ["es5", "dom", "es2015.promise", "es2015.iterable"],
+        "declaration": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noImplicitAny": false,
+        "removeComments": false,
+        "sourceMap": true,
+        "importHelpers": true,
+        "typeRoots": [
+            "../node_modules/@types"
+        ],
+        "rootDir": "src",
+        "outDir": "dist"
+    }
+}

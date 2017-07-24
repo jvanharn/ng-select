@@ -851,4 +851,3 @@ export class Diacritics {
         return text.replace(/[^\u0000-\u007E]/g, match);
     }
 }
-
